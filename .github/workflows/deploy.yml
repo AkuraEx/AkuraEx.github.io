@@ -1,5 +1,9 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy muh website
+               uses: actions/setup-node@v2
+               with:
+                   node-version: 16.14.0
+                   cache: "npm
 
 on:
   # Runs on pushes targeting the default branch
