@@ -3,7 +3,7 @@ name: Deploy muh website
 uses: actions/setup-node@v2
 with:
   node-version: 16.14.0
-  cache: "npm
+  cache: "npm"
 
 on:
   # Runs on pushes targeting the default branch
