@@ -1,6 +1,7 @@
 import '../style.css';
 import typescriptLogo from '../assets/typescript.svg';
 import { setupCounter } from './counter.ts';
+import { animateFavicon } from './animate.ts';
 const { BASE_URL } = import.meta.env;
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -22,3 +23,6 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+setInterval(animateFavicon, 300);
+animateFavicon();
