@@ -1,13 +1,18 @@
-export function animateFavicon() {
-    const now = new Date();
-    const seconds = now.getSeconds(); // ✅ Correct way
-    let src = "src/assets/Arisu.png";
+let turn = 0;
+let src = "src/assets/emerald1.png";
 
-    if (seconds % 2 == 0) {
-        src = "src/assets/Arisu2.png";
-    } else if (seconds % 3 == 0) {
-        src = "src/assets/Arisu3.png";
+export function animateFavicon() {
+    if (turn % 3 == 1) {
+        src = "src/assets/emerald2.png";
+    } else if (turn % 3 == 2) {
+        src = "src/assets/emerald3.png";
+    } else {
+        src = "src/assets/emerald1.png";
+        turn = 0;
     }
+
+    turn ++;
+
 
     const link = document.createElement('link');
     const oldLink = document.getElementById('dynamic-favicon');

@@ -24,5 +24,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
-setInterval(animateFavicon, 300);
+setInterval(animateFavicon, 100);
 animateFavicon();
