@@ -1,13 +1,14 @@
+const { BASE_URL } = import.meta.env;
 let turn = 0;
-let src = "src/assets/emerald1.png";
+let src = `${BASE_URL}src/assets/emerald1.png`;
 
 export function animateFavicon() {
     if (turn % 3 == 1) {
-        src = "/src/assets/emerald2.png";
+        src = `${BASE_URL}/src/assets/emerald2.png`;
     } else if (turn % 3 == 2) {
-        src = "/src/assets/emerald3.png";
+        src = `${BASE_URL}/src/assets/emerald3.png`;
     } else {
-        src = "/src/assets/emerald1.png";
+        src = `${BASE_URL}/src/assets/emerald1.png`;
         turn = 0;
     }
 
