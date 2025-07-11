@@ -1,28 +1,49 @@
 import '../style.css';
-import typescriptLogo from '../assets/typescript.svg';
-import { setupCounter } from './counter.ts';
 import { animateFavicon } from './animate.ts';
-const { BASE_URL } = import.meta.env;
+import arisu from '../assets/Arisu.png';
+import arisu2 from '../assets/Arisu2.png';
+import arisu3 from '../assets/Arisu3.png';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${BASE_URL}vite.svg" class="logo" alt="eeee" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+    <section>
+      <nav>
+        <a href="/about" class="menuLink" style="opacity: none;>
+          <span class="spanBox">
+              <img alt = "flatAboutMe" src="${arisu}" class="logo" style="position: absolute;">
+            <span class="menuText">
+              About Me
+            </span>
+          </span>
+        </a>
+        <a href="/skills" class="menuLink" style="opacity: none;>
+          <span class="spanBox">
+              <img alt = "flatAboutMe" src="${arisu2}" class="logo" style="position: absolute;">
+            <span class="menuText">
+              Projects
+            </span>
+        </a>
+        <a href="/projects" class="menuLink" style="opacity: none;>
+          <span class="spanBox">
+              <img alt = "flatAboutMe" src="${arisu3}" class="logo" style="position: absolute;">
+            <span class="menuText">
+              Skills
+            </span>
+        </a>
+        <a href="/secretfourththing" class="menuLink" style="opacity: none;>
+          <span class="spanBox">
+              <img alt = "flatAboutMe" src="${arisu}" class="logo" style="position: absolute;">
+            <span class="menuText">
+              Secret Fourth Thing
+            </span>
+        </a>
+    </nav>
+  </section>
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  <section class="footer">
+  </section>
+</div>
+`
 
 setInterval(animateFavicon, 100);
 animateFavicon();
