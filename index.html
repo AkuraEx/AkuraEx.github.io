@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="background-color: #504952;">
   <head>
     <meta charset="UTF-8" />
       <script>
         const { BASE_URL } = import.meta.env;
       </script>
     <link rel="icon" type="image/png" href="${BASE_URL}emerald1.png" />
+    <link rel="preload" href="${BASE_URL}mountain.jpg" as="style">
+    <link rel="preload" href="src/style.css" as="style">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
   </head>
   <body>
+    <img class="customBack" alt = "failed" src="mountain.jpg" style="width: 100vw; height:100vh; margin: 0; padding: 0; overflow: hidden;"/>
     <div id="app">
     </div>
     <script type="module" src="/src/scripts/index.ts"></script>

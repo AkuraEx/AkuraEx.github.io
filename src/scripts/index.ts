@@ -11,6 +11,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <a href="/about" class="menuLink" style="opacity: none;>
           <span class="spanBox">
               <img alt = "flatAboutMe" src="${arisu}" class="logo" style="position: absolute;">
+                <p style="font-family: 'NerdFont'; font-size: 24px;">
+                  Nerd Font Test:   
+                </p>
             <span class="menuText">
               About Me
             </span>
@@ -44,6 +47,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </section>
 </div>
 `
+
 
 setInterval(animateFavicon, 100);
 animateFavicon();
