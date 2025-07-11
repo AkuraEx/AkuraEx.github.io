@@ -12,7 +12,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <span class="spanBox">
               <img alt = "flatAboutMe" src="${arisu}" class="logo" style="position: absolute;">
                 <p style="font-family: 'NerdFont'; font-size: 24px;">
-                  Nerd Font Test:   
+                  Nerd Font Test:  
                 </p>
             <span class="menuText">
               About Me
