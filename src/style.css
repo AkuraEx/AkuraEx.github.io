@@ -1,11 +1,12 @@
 :root {
-  --uiblue: #387490b2;
-  --uilblue: #01ACB6;
+  --uiblue: #0b2c3abb;
+  --uilblue: #abb5df;
   --uigrey: #686868;
   --uiblack: #2B2B2D;
+  --uired: #e26959;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'NerdFont';
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 800;
 
   color-scheme: light dark;
   color: rgba(154, 129, 187, 0.87);
@@ -20,7 +21,7 @@
 @font-face {
   font-family: 'NerdFont';
   src: url('/fonts/3270NerdFont-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: bolder;
   font-style: normal;
   font-display: swap;
 }
@@ -133,7 +134,7 @@ nav {
 }
 
 .menuLink {
-  animation: 1s ease-out 0s 1 boxLoad;
+  animation: 2s ease-out 0s 1 boxLoad;
   margin: 20px;
   width: 175px;
   height: 175px;
@@ -144,11 +145,9 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--uiblue);
   position: relative;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;
   font-size: 1.2em;
   font-weight: 500;
   transform: none;
@@ -170,7 +169,6 @@ nav {
 
 .spanBox {
   box-sizing: border-box;
-  display: flex;
   display: block;
   overflow: hidden;
   height: 60px;
@@ -183,30 +181,54 @@ nav {
   opacity: 1;
   margin-top: 100px;
   white-space: nowrap;
-  overflow: hidden;
   font-size: 20px;
 }
 
-.footer {
+.header {
   transform: translateY(0%) translateZ(0px);
-  background: var(--uiblue);
-  box-sizing: border-box;
+  background-color: var(--uiblue);
   -moz-box-align: center;
   align-items: center;
   width: 100%;
-  height: 50px;
-  left: 0px;
-  bottom: 0px;
-  display: flex;
+  height: 34px;
+  top: 0px;
+  left: 0%;
   position: absolute;
   padding-left: 12px;
   padding-right: 12px;
   z-index: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
 }
+
+.headerElement {
+  margin-left: 0.2%;
+  margin-right: 0.2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 8px;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-size: 1.05em;
+  font-weight: 500;
+  font-family: 'Segoe UI', 'NerdFont';
+  border: 2px solid var(--uilblue);
+}
+
+.one {
+  background: var(--uilblue);
+  color: var(--uiblue);
+  border-radius: 4px;
+  border: 2px solid var(--uilblue);
+}
+
 
 @keyframes boxLoad {
   0% {
-    margin: 10px;
+    margin: 5px;
     opacity: 0;
   }
   100% {
