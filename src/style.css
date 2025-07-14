@@ -1,6 +1,6 @@
 :root {
-  --uiblue: #0b2c3abb;
-  --uilblue: #abb5df;
+  --uiblue: #061a2296;
+  --uilblue: #abb6df;
   --uigrey: #686868;
   --uiblack: #2B2B2D;
   --uired: #e26959;
@@ -46,7 +46,7 @@ body {
 
 a {
   font-family: inherit;
-  color: whitesmoke;
+  color: var(--uilblue);
   font-weight: 400;
   text-decoration: none;
 }
@@ -148,7 +148,6 @@ nav {
   position: relative;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  font-size: 1.2em;
   font-weight: 500;
   transform: none;
   border: 2px solid var(--uilblue);
@@ -180,8 +179,8 @@ nav {
   height: auto;
   opacity: 1;
   margin-top: 100px;
-  white-space: nowrap;
-  font-size: 20px;
+  white-space: wrap;
+  font-size: 24px;
 }
 
 .header {
@@ -190,7 +189,7 @@ nav {
   -moz-box-align: center;
   align-items: center;
   width: 100%;
-  height: 34px;
+  height: 37px;
   top: 0px;
   left: 0%;
   position: absolute;
@@ -204,24 +203,26 @@ nav {
 .headerElement {
   margin-left: 0.2%;
   margin-right: 0.2%;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-radius: 8px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  padding-bottom: 0.130%;
+  border-radius: 12px;
   z-index: 1;
   align-items: center;
   justify-content: center;
   position: relative;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  font-size: 1.05em;
-  font-weight: 500;
+  font-size: 1.00em;
+  font-weight: 350;
   font-family: 'Segoe UI', 'NerdFont';
   border: 2px solid var(--uilblue);
+  color: var(--uilblue);
 }
 
 .one {
   background: var(--uilblue);
   color: var(--uiblue);
-  border-radius: 4px;
+  border-radius: 6px;
   border: 2px solid var(--uilblue);
 }
 

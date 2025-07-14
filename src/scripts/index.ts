@@ -15,10 +15,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <a>&nbsp4&nbsp</a>
         <a>&nbsp5&nbsp</a>
       </div>
-      <a href="https://github.com/AkuraEx" target="_blank" class = "headerElement" style="color: #e26959; border-color: #e26959;">
-        \uea84 &nbspGithub 
+      <a href="https://github.com/AkuraEx" target="_blank" class = "headerElement">
+        \uea84 &nbsp&nbspGithub 
       </a>
-      <a class = "headerElement" id="time">
+      <a href="https://www.linkedin.com/in/andrew-w-2a334b265/" target="_blank" class = "headerElement"">
+        \ue820 &nbsp&nbspLinkedIn 
+      </a>
+      <a class = "headerElement" id="time" style="left: 40%; position:absolute;">
       </a>
     </section>
 
@@ -28,8 +31,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <span class="spanBox">
               <img alt = "flatAboutMe" src="${arisu}" class="logo" style="position: absolute;">
             <span class="menuText">
-                <p style="font-family: 'Segoe UI', 'NerdFont'; font-size: 24px;">
-                  \uef69 &nbspAbout Me 
+                <p>
+                  &nbspAbout Me 
                 </p>
             </span>
           </span>
