@@ -2,6 +2,12 @@ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 const monthOfYear = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 let AMPM = "AM"
 
+function addZero(i: number) {
+    let iString = i.toString()
+    if (i < 10) {iString = "0" + iString};
+    return iString;
+}
+
 export function getTime() {
     const date = new Date();
     const pad = (n: number) => n.toString().padStart(2, "0");
@@ -11,8 +17,8 @@ export function getTime() {
     const month = monthOfYear[date.getMonth() + 1];
     const year = date.getFullYear();
     const hour = date.getHours();
-    const minutes = date.getMinutes();
-    const second = date.getSeconds();
+    let minutes = date.getMinutes();
+    let second = date.getSeconds();
 
     if(hour > 12) {
         AMPM = "PM"
@@ -20,8 +26,7 @@ export function getTime() {
         AMPM = "AM"
     }
 
-
-    const dateString = `\uf43a &nbsp&nbsp ${day}, ${month} ${dayNum}, ${year} ${hour % 12}:${minutes}:${second} ${AMPM}`;
+    const dateString = `\uf43a &nbsp&nbsp ${day}, ${month} ${dayNum}, ${year} ${hour % 12}:${addZero(minutes)}:${addZero(second)} ${AMPM}`;
 
     const timeElement = document.getElementById("time");
     if (timeElement) {

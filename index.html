@@ -5,7 +5,7 @@
       <script>
         const { BASE_URL } = import.meta.env;
       </script>
-    <link rel="icon" type="image/png" href="${BASE_URL}emerald1.png" />
+    <link rel="icon" type="image/png" href="emerald1.png" />
     <link rel="preload" href="${BASE_URL}mountain.jpg" as="style">
     <link rel="preload" href="src/style.css" as="style">
 
@@ -14,8 +14,11 @@
   </head>
   <body>
     <img class="customBack" alt = "failed" src="mountain.jpg" style="width: 100vw; height:100vh; margin: 0; padding: 0; overflow: hidden;"/>
+    <div id="header"></div>
     <div id="app">
     </div>
+    <script type="module" src="/src/scripts/aboutme.ts"></script>
     <script type="module" src="/src/scripts/index.ts"></script>
+    <script type="module" src="/src/components/header.ts"></script>
   </body>
 </html>
