@@ -1,22 +1,27 @@
+import { mainPage } from './index.ts';
 
 export function aboutmePage() {
-  document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <section style="position: absolute; align-items: center;">
-    <button type="button" class="menuLink" style="opacity:none; position: absolute;" id="backToggle">
-      <span class="spanBox" style="position: absolute;">
-        <span class="menuText">
-          &nbspGo back 
+  const app = document.querySelector<HTMLDivElement>('#app')!;
+  app.innerHTML = `
+    <section style="position: absolute; align-items: center;">
+      <button type="button" class="menuLink" id="backToggle" style="position: absolute;">
+        <section class="windowHeader">
+          <div>
+          asdf
+          </div>
+          <div>
+          asdf
+          </div>
+        </section>
+        <span class="spanBox" style="position: absolute;">
+          <span class="shellText">&nbspGo back</span>
         </span>
-      </span>
-    </button>
-  </section>
-`
-}
+      </button>
+    </section>
+  `;
 
-setTimeout(() => {
-  const aboutToggle = document.getElementById('backToggle');
-
-  aboutToggle?.addEventListener('click', () => {
-    aboutmePage()
+  const backToggle = document.getElementById('backToggle');
+  backToggle?.addEventListener('click', () => {
+    mainPage();
   });
-}, 0);
+}

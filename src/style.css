@@ -1,5 +1,6 @@
 :root {
   --uiblue: #061a2296;
+  --uitblue: #061a2238;
   --uilblue: #abb6df;
   --uigrey: #686868;
   --uiblack: #2B2B2D;
@@ -31,6 +32,7 @@
 html {
   background-color: var(--uiblack);
   background-position: center;
+  background-image: url("mountain.jpg");
   background-size: cover;
 }
 
@@ -129,10 +131,6 @@ nav {
   box-sizing: border-box;
 }
 
-.customBack {
-  animation: 2s ease-out 0s 1 backLoad;
-  transition: 0.25s;
-}
 
 .menuLink {
   animation: 2s ease-out 0s 1 boxLoad;
@@ -141,7 +139,7 @@ nav {
   height: 175px;
   transition: 0.25s;
   box-sizing: border-box;
-  background-color: var(--uiblue);
+  background-color: var(--uitblue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,6 +178,15 @@ nav {
   color: var(--uilblue)
 }
 
+.shellText {
+  height: auto;
+  opacity: 1;
+  white-space: wrap;
+  font-size: 24px;
+  font-family: 'Fira Code';
+  color: var(--uilblue);
+}
+
 .header {
   transform: translateY(0%) translateZ(0px);
   background-color: var(--uiblue);
@@ -196,6 +203,20 @@ nav {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   display: flex;
   backdrop-filter: blur(4px);
+}
+
+.windowHeader {
+  transform: translateY(0%) translateZ(0px);
+  background-color: var(--uiblue);
+  -moz-box-align: center;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  z-index: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  backdrop-filter: blur(4px);
+  top: 0;
 }
 
 .headerElement {
@@ -236,15 +257,6 @@ nav {
   }
 }
 
-@keyframes backLoad {
-  0% {
-    opacity: 0;
-    transition: 1s ease;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 @media (prefers-color-scheme: light) {
   :root {
